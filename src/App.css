@@ -1,0 +1,75 @@
+.App {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100%;
+    font-family: 'Roboto Slab', serif;
+    padding: 50px;
+    margin: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background: #4e5452;
+}
+
+.app-points-container {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin-right: 40px;
+}
+
+.point-form {
+    margin-right: 30px;
+}
+
+.point-form-input {
+    width: 100%;
+    height: 40px;
+    font-size: 20px;
+}
+
+.pointList {
+    list-style: none;
+    padding: 0;
+    position: relative;
+}
+
+
+
+.point-element {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin: 0;
+    justify-content: space-between;
+    outline: 2px solid black;
+    margin-bottom: 10px;
+    position: relative;
+    background: white;
+}
+
+.point-element-text {
+    display: block;
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.point-element-delete {
+    width: 0;
+    height: 0;
+    padding: 0;
+    border: 0;
+    position: absolute;
+    right: 50px;
+}
+
+.point-element-delete :hover {
+    cursor: pointer;
+}
+
+.map {
+    outline: 1px solid black;
+    width: 55%;
+    height: 600px;
+}
