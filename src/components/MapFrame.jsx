@@ -4,12 +4,11 @@ import { YMaps, Map, Placemark, ZoomControl, FullscreenControl, Clusterer, Geolo
 class MapFrame extends Component {
 
     render() {
-        const lastPoint = this.props.points[this.props.points.length - 1]
         return (          
             <YMaps>
                 <div className='map'>
                     <Map width='100%' height="100%" state={{ 
-                        center: ((this.props.points.length > 0)? lastPoint.coordinates: [55.75, 37.57]), zoom: 13 }}>
+                        center: ((this.props.points.length > 0) ? this.props.points[this.props.points.length - 1].coordinates : [55.75, 37.57]), zoom: 13 }}>
                     <Clusterer>
                     {this.props.points ? this.props.points.map((point) => (
                         <Placemark options={{draggable: true}} key={point.key} geometry={point.coordinates} />
