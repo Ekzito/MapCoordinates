@@ -7,8 +7,8 @@ import MapFrame from './components/MapFrame'
 
 
 class App extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.key = 0
   }
   state = {
@@ -38,7 +38,7 @@ class App extends Component {
         <AddPointForm pointAdd={this.pointAdd.bind(this)}></AddPointForm>
         <PointsList deletePoint={this.deletePoint.bind(this)} points={this.state.points}></PointsList>
       </div>
-        <MapFrame lastPoint={this.state.points[this.state.points.length - 1]} points={this.state.points}></MapFrame>
+        <MapFrame points={this.state.points}></MapFrame>
       </div>
     );
   }

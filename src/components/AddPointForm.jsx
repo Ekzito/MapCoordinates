@@ -7,9 +7,8 @@ class AddPointForm extends Component {
 
     handleSubmit(event) {
         event.preventDefault();
-        this.formValidate();
         if (this.state.pointCoordinates) {
-            if (this.formValidate() === true) {
+            if (this.formValidate()) {
                 let coordinates = this.state.pointCoordinates.split(' ');
                 this.props.pointAdd(coordinates);
                 this.setState({pointCoordinates: ''})
@@ -27,10 +26,11 @@ class AddPointForm extends Component {
     }
 
     formValidate() {
-        let str = this.state.pointCoordinates;
-        let valide = /[-]*[\d]+[.][\d]+\s[-]*[\d]+[.][\d]+/;
-        if (str.match(valide) !== null) {
-            return str.match(valide)[0] === str;
+        const coordinates = this.state.pointCoordinates;
+        const coordinatesRegEx = /[-]*[\d]+[.][\d]+\s[-]*[\d]+[.][\d]+/;
+        const coordinatesRegExMatch = coordinates.match(coordinatesRegEx);
+        if (coordinatesRegExMatch !== null) {
+            return coordinatesRegExMatch[0] === coordinates;
         }
         return false;
     }
@@ -38,7 +38,8 @@ class AddPointForm extends Component {
     render() {
         return(
             <form className='point-form' onSubmit={this.handleSubmit.bind(this)}>
-                <input className='point-form-input' placeholder='Новая точка маршрута' value={this.state.pointCoordinates} onChange={this.handleChange.bind(this)} type="text"/>
+                <label htmlFor='addPointInput'>Введите точку маршрута в формате "X.X Y.Y"</label>
+                <input id='addPointInput' className='point-form-input' placeholder='Новая точка маршрута' value={this.state.pointCoordinates} onChange={this.handleChange.bind(this)} type="text"/>
             </form>
         )
     }
