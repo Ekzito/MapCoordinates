@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './PointsList.css'
 
 class PointList extends Component {
 

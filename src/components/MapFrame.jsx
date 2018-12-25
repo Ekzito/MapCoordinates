@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { YMaps, Map, Placemark, ZoomControl, FullscreenControl, Clusterer, GeolocationControl, Polyline } from 'react-yandex-maps';
+import './MapFrame.css'
 
 class MapFrame extends Component {
 

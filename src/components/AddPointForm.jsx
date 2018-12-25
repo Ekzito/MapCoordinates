@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './AddPointForm.css';
 
 class AddPointForm extends Component {
     state = {
