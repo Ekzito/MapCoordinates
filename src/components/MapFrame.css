@@ -1,5 +1,19 @@
 .map {
     outline: 1px solid black;
-    width: 55%;
+    width: 90%;
     height: 600px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+    .map {
+        outline: 1px solid black;
+        width: 60%;
+        height: 600px;
+        margin: 0 auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-right: 20px;
+    }
 }

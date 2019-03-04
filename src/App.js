@@ -34,11 +34,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-      <div className='app-points-container'>
-        <AddPointForm pointAdd={this.pointAdd.bind(this)}></AddPointForm>
-        <PointsList deletePoint={this.deletePoint.bind(this)} points={this.state.points}></PointsList>
-      </div>
-        <MapFrame points={this.state.points}></MapFrame>
+        <div className='app-points-container'>
+          <AddPointForm pointAdd={this.pointAdd.bind(this)}></AddPointForm>
+          <PointsList deletePoint={this.deletePoint.bind(this)} points={this.state.points}></PointsList>
+        </div>
+          <MapFrame points={this.state.points}></MapFrame>
       </div>
     );
   }

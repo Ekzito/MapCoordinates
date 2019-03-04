@@ -1,19 +1,27 @@
 .App {
     display: flex;
-    flex-wrap: wrap;
-    min-height: 100%;
+    flex-direction: column;
     font-family: 'Roboto Slab', serif;
-    padding: 50px;
-    margin: 10px;
-    border: 2px solid black;
-    border-radius: 10px;
     background: #4e5452;
 }
 
 .app-points-container {
     display: flex;
     flex-direction: column;
-    width: 40%;
-    margin-right: 40px;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 20px;
 }
 
+@media (min-width: 768px) {
+    .App {
+        flex-direction: row;
+        font-family: 'Roboto Slab', serif;
+        background: #4e5452;
+        justify-content: space-between;
+    } 
+    
+    .app-points-container {
+        width: 30%;
+    }
+}
